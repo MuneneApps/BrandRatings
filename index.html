@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Ratings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Brand Ratings</h1>
+  </header>
+
+  <section id="brand-list">
+    <div class="brand">
+      <h2>Brand 1</h2>
+      <div class="rating" data-brand="Brand 1">
+        <span>Rate this brand: </span>
+        <button onclick="rateBrand(1)">★</button>
+        <button onclick="rateBrand(2)">★</button>
+        <button onclick="rateBrand(3)">★</button>
+        <button onclick="rateBrand(4)">★</button>
+        <button onclick="rateBrand(5)">★</button>
+      </div>
+      <textarea placeholder="Leave your feedback here..." id="feedback-Brand 1"></textarea>
+      <button onclick="submitFeedback('Brand 1')">Submit</button>
+      <div id="feedback-list-Brand 1" class="feedback-list"></div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
