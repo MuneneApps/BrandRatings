@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Ratings</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <header>
+    <img src="logo-placeholder.png" alt="Brand Ratings Logo" id="logo">
+    <h1>Brand Ratings</h1>
+    <div id="header-buttons">
+      <input type="text" placeholder="Search for a brand..." id="search-bar">
+      <button onclick="showLogin()">Login</button>
+      <button onclick="showCreateAccount()">Create Account</button>
+    </div>
+  </header>
+
+  <section id="brand-list">
+    <div class="brand">
+      <h2>Brand 1</h2>
+      <p>Previous rating: 4.5/5</p>
+      <button onclick="showFeedback('Brand 1')">View Feedback</button>
+      <div class="rating" data-brand="Brand 1">
+        <span>Rate this brand: </span>
+        <button onclick="rateBrand(1)">★</button>
+        <button onclick="rateBrand(2)">★</button>
+        <button onclick="rateBrand(3)">★</button>
+        <button onclick="rateBrand(4)">★</button>
+        <button onclick="rateBrand(5)">★</button>
+      </div>
+      <textarea placeholder="Leave your feedback here..." id="feedback-Brand 1"></textarea>
+      <button onclick="submitFeedback('Brand 1')">Submit</button>
+      <div id="feedback-list-Brand 1" class="feedback-list"></div>
+    </div>
+  </section>
+
+  <!-- Login / Create Account Section -->
+  <section id="auth-section" style="display:none;">
+    <!-- Login Form -->
+    <div class="form-container" id="login-section" style="display:none;">
+      <h2>Login</h2>
+      <form id="login-form">
+        <label for="login-email">Email:</label>
+        <input type="email" id="login-email" name="login-email" required placeholder="Enter your email">
+
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" name="login-password" required placeholder="Enter your password">
+
+        <button type="submit" onclick="loginUser()">Login</button>
+      </form>
+    </div>
+
+    <!-- Create Account Form -->
+    <div class="form-container" id="create-account-section" style="display:none;">
+      <h2>Create Account</h2>
+      <form id="create-account-form">
+        <label for="create-name">Full Name:</label>
+        <input type="text" id="create-name" name="create-name" required placeholder="Enter your full name">
+
+        <label for="create-email">Email:</label>
+        <input type="email" id="create-email" name="create-email" required placeholder="Enter your email">
+
+        <label for="create-password">Password:</label>
+        <input type="password" id="create-password" name="create-password" required placeholder="Create a password">
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+
+        <button type="submit" onclick="createAccount()">Create Account</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="script1.js"></script>
+</body>
+</html>
